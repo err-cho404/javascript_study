@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container>.yangdoll.dollclub{
+            color: red;
+        }
+        .yangdoll .dollclub{
+            border: 2px dotted blue;
+        }
+        .yangdoll>.dollclub{
+            background-color:  yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+        <yangdoll>영구없다</yangdoll>
+        <p class="yangdoll dollclub">나는 두곳의 동아리에 가입</p>
+        <p class="yangdoll">나는 yangdoll 동아리에 가입</p>
+        <p class="dollclub">나는 dollclub 동아리에 가입</p>
+        <ul class="yangdoll">
+            <li class="dollclub">부모는 yangdoll 나는 dollclub에 가입</li>
+            <ul>
+                <li class="dollclub">나는 양돌의 손자 리스트</li>
+                <li>나는 양돌의 손자 리스트2</li>
+            </ul>
+        </ul>
+</body>
+</html>

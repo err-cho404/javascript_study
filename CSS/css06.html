@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        div>div{
+            border-color: blueviolet;
+        }
+        div.cont{
+            position: relative;
+        }
+        div.cont>.inner{
+            position: absolute;
+        }
+        .one{
+            background-color: aqua ;
+           
+        }
+        .two{
+            background-color: beige;
+            z-index: 1;
+            opacity: 0.8;
+        }
+        .three{
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+    </div>
+</body>
+</html>
