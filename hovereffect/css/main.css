@@ -1,0 +1,212 @@
+html {
+    font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    background-color: #656565;
+}
+
+img {
+    vertical-align: middle;
+}
+
+button {
+    outline: none;
+}
+
+.page-header{
+    background-color: #FFF;
+}
+.page-header h1{
+    width : 976px;
+    height : 80px;
+    margin: 0 auto;
+    padding-left : 10px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 80px;
+    letter-spacing: 0.1em;
+}
+div.page-main{
+    position: relative;
+}
+.page-main>div{
+    padding : 50px 0 100px 0; 
+}
+.page-main>div h2{
+    color : #FFFFFF;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+}
+
+#typo{
+    margin: 0;
+    padding: 0;
+    background: #3498db;
+    font-weight: bold;
+    font-size: 100px;
+    color: #FFF;
+    text-align: center;
+    height : 300px;
+    line-height : 300px;
+}
+#typo .inner{
+    width : 976px;
+    margin : 0 auto;
+}
+
+#buttons1{
+    background-color: #ebc000;
+}
+#buttons1 .inner{
+    position: relative;
+    width: 976px;
+    margin : 0 auto;
+}
+#buttons1 button{
+    display : block;
+    width : 224px;
+    height : 80px;
+    float : left;
+    margin : 0 10px 20px 10px;
+    padding : 0;
+    font-size: 16px;
+    letter-spacing: 0.5em;
+    color: #ebc000;
+    background-color: #fff; 
+    border: rgba(115,101,189,1.0) solid 0px;
+    border-radius: 20px;
+    position: relative;
+}
+
+#buttons1 button .bg{
+    position: absolute;
+    top : 0;
+    left : 0;
+    width : 0;
+    height : 100%;
+    overflow: hidden;
+}
+#buttons1 button .bg span{
+    display: block;
+    width : 224px;
+    height : 80px;
+    line-height : 80px;
+    color : #FFF;
+    background-color: purple;
+    border-radius: 20px;
+}
+
+/* button2의 스타일 정의 */
+#buttons2{
+    background-color: #01b169;
+    height : 340px;
+}
+
+#buttons2 .inner{
+    width : 976px;
+    margin : 0 auto;
+    position: relative;
+}
+#buttons2 .inner button{
+    display : block;
+    width : 224px;
+    height : 224px;
+    overflow : hidden;
+    padding : 0 0 35px 0;
+    font-size: 16px;
+    color :  #01b169;
+    background-color: #FFF;
+    border : none;
+    border-radius: 112px;
+    position : absolute;
+}
+
+#buttons2 .inner button:nth-child(1){
+    left : 10px;
+}
+#buttons2 .inner button:nth-child(2){
+    left : 254px;
+}
+#buttons2 .inner button:nth-child(3){
+    left : 498px;
+}
+#buttons2 .inner button:nth-child(4){
+    left : 742px;
+}
+
+#buttons2 button img:first-child{
+    position :absolute;
+}
+#buttons2 button img:nth-child(2){
+    opacity : 0;
+}
+
+
+.page-main>aside{
+    background-color: rgba( 0,0,0,0.8); 
+    width: 350px;
+    height : 100%;
+    top : 0;
+    left : -350px;
+    position: fixed;
+}
+.page-main>aside ul{
+    margin : 0;
+    padding : 0;
+    position: absolute;
+    top : 50px;
+    left : 90px;
+}
+.page-main>aside li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.page-main>aside button{
+    background-color: rgba( 0,0,0,0.8);
+    display: block;
+    position: absolute;
+    top : 150px;
+    left : 350px;
+    margin: 0;
+    padding: 0;
+    border : none;
+}
+
+
+.clearfix:before,
+.clearfix:after{
+    clear : both;
+    content: "";
+    display: table;
+}
+
+
+/* footer 부분 스타일 정의 */
+.page-footer{
+    background: #656565;
+}
+.page-footer small{
+    display : block;
+    width : 976px;
+    height : 150px;
+    line-height : 150px;
+    margin : 0 auto;
+    color : #FFF;
+    font-size : 12px;
+    text-align: right;
+}
+
+.page-footer small a{
+    text-decoration: none;
+    color : #FFF;
+}
+
+
+
+
