@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+</head>
+<body>
+    <h1>배열자료추가</h1>
+    <script>
+        const varNum = 10; //const 는 java에서의 final변수와 같음, 한번 값이 들어가면 바꿀수 없음
+        console.log(varNum);
+        // varNum = 500;
+        // console.log(varNum);
+
+        //자바 스크립드의 배열은 자바의 List와 더 유사하다.
+        const arrData = [];//배열이 만들어진 주소를 arrData가 저장하고 있다.
+        console.log(arrData);
+        arrData.push(125);// 배열에 자료를 추가,삭제할 수 있다.
+        console.log(arrData);
+        arrData = [125]; //다른 배열이므로 주소도 다름=>다른 주소값을 지정하려고 한다.=>실행시 오류
+        console.log(arrData);
+    </script>
+</body>
+</html>

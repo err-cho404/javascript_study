@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["fname"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;//동작취소
+          }
+          let emailBox = document.forms["myForm"]["email"].value;
+          if (emailBox == "") {
+            alert("이메일 주소가 입력되지 않았습니다.");
+            return false;//동작취소
+          }else{
+            if(emailBox.length<8){
+                alert("8자 이상 적어주세요")
+                return false;
+            }
+          }
+         
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="get">
+        Name: <input type="text" name="fname"><br>
+        email: <input type="text" name="email"><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1 ={}; //빈객체 생성, new object();와  ==object(); 와 =={}와 같음
+        obj1.data1 = 60; //속성 추가
+        obj1[`irum`] = `yang`; //속성 추가
+        console.log(obj1);
+        console.log(obj1.irum);
+        let obj2 = {
+            "my name" : "hong",
+            age : 19,
+            "add-ress" : "수원시",
+            "hobby" : "당구"
+        }
+        console.log(obj2);
+       /* console.log(obj2.my name);//불가(속성명에 띄어쓰기가 되어있어서) */
+        console.log(obj2["my name"]);//가능
+        console.log(obj2["age"]);
+        console.log(obj2["add-ress"]);
+        console.log(obj2.hobby, obj2["hobby"]);
+        //객체의 속성명을 문자열(쌍따옴표로만 문자열 정의해야함)로 주는 객체 정의 =>json(서로다른 프로그램들에 전달하기 위해 공통적으로 사용한 쌍다옴표 사용) 형태로의 객체 정의이다.
+        //java는 쌍따옴표, 싱글다옴표, 백팁 사용하나 자바스크립트는 쌍다옴표만 사용하므로 서로 사용이 겹치는 쌍따옴표 사용
+        let obj3 = {
+            "myname" : "hong",
+            "age" : 19,
+            "address" : "수원시",
+            "hobby" : "당구"
+        }
+
+        let objName = new String("yang"); // => 가능하기는 하나 이렇게 굳이 쓸 필요없음
+        //let objName = String("yang");
+    </script>
+    
+    </body>
+</html>

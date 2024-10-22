@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+</head>
+<body>
+    <h1>영구없다</h1>
+    <script>
+        console.log(typeof 3); //typeof는 함수가 아니라 연산자다. 결과는 문자열로 반환한다. 그러나 마치 함수처럼 사용한다.
+        console.log(typeof ('ad'));
+        // let inData = prompt('아무거나 입력');
+        let inData = 130;
+        console.log(typeof inData);
+        if(typeof inData == 'string'){
+            console.log('입력한 자료는 문자열 자료입니다.');
+        }
+        if(typeof inData == 'number'){
+            console.log('입력한 자료는 숫자 자료입니다.');
+        }
+        var data = []; //배열 대입
+        console.log('data에 입력한 자료는' + typeof data + '자료입니다.');
+        var data = {}; //객체 대입
+        console.log('data에 입력한 자료는' + typeof data + '자료입니다.');
+        var data = function(){}; //함수 대입
+        console.log('data에 입력한 자료는' + typeof data + '자료입니다.');
+
+        let sampleVar;
+        console.log('data에 입력한 자료는' + typeof sampleVar + '자료입니다.');
+        if(typeof sampleVar == 'undefined'){
+            console.log('sampleVar변수에 값이 할당되지 않았습니다');
+        }
+
+        let numData = 125; //정수 10진수 대입
+        let numData1 = 125e3; //125*1000(10의 3승)
+        let numData2 = 125e-3; //125*1/1000(10의 -3승)
+        console.log(numData,numData1,numData2);
+
+        numData = 0x123; //16진수 123
+        console.log(numData);
+
+        numData = 0o123; //8진수 123
+        console.log(numData);
+
+        numData = 0b111; //2진수 123
+        console.log(numData);
+    </script>
+</body>
+</html>
