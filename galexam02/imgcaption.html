@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/jquery-ui-1.10.3.custom.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div id="container">
+        <div class="thumbs">
+            <a href="./images/pic1.jpg"><img src="./images/th_pic1.jpg" alt=""></a> 
+            <em>첫번째 이미지의 캡션입니다.</em> 
+            <a href="./images/pic2.jpg"><img src="./images/th_pic2.jpg" alt=""></a>
+            <em>두번째 이미지의 캡션입니다. 길게 쓰고 싶지만 할말이 없어요...눈물ㄹ 도르르...도르르ㅡ</em> 
+            <a href="./images/pic3.jpg"><img src="./images/th_pic3.jpg" alt=""></a>
+            <em>세번째 이미지의 캡션입니다.</em> 
+        </div>
+        <div id="largeImg">
+            <img src="./images/pic1.jpg" alt="">
+        </div>
+    </div>
+    <script> 
+        $(document).ready(function(){
+            //섬네일이미지에서 클락을 하면 라지이미지 상자의 이미지 내용이 부드럽게 바뀐다. + 캡션을 추가한다.
+            $('#container>.thumbs>em').hide();//구체적인 선택이 좋음
+            $('#caption').remove(); //동적으로 새로 만들어진태그를 모두 지운다,
+            $('.thumbs>a').click(function(){ //동적 태그를 만듦
+                let msg = $(this).next('em').text(); //캡션에 넣을 자료를 얻어온다.
+                $("#largeImg").append('<div id="caption"></div>')
+                $("#largeImg #caption").text(msg);
+                // console.log(msg);
+                let valueData = $(this).attr('href'); 
+                let captionBoxHeight = $("#largeImg #caption").outerHeight(); //div 캡션 내용물의 높이를 구한다.
+                $("#largeImg #caption").animate({top : '-'+ captionBoxHeight + 'px'},1000);
+                //overflow에 의해서 아래에 숩겨진 캡션내용을 지정한 필셀만큼 위로 끌어올린다(-). 내리는건(+)
+                $('#largeImg>img').attr('src',valueData);
+                $('#largeImg>img').css('opacity','0').animate({opacity : 1}, 3000);//섬네일이미지에서 클릭하면 라지이미지 상자의 이미지 내용이 부드럽게 바뀐다.
+                return false;
+            })
+        });
+    </script> 
+
+</body>
+</html>

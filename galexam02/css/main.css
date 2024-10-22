@@ -1,0 +1,32 @@
+
+        body{
+            background-color: #192839;
+            margin: 0 auto;
+        }
+        #container{
+            width: 650px;
+            margin: 0 auto;
+        }
+        div.thumbs{
+            width: 100px;
+            float: left;
+        }
+        div.thumbs img{
+            border : 1px solid white;
+            margin: 1.5px;
+            padding: 5px;
+        }
+        div#largeImg{
+            margin-left: 110px;
+            width: 500px;
+            height: 280px;
+            border : 1px solid white;
+            padding: 5px;
+            overflow: hidden;
+        }
+        #caption{
+            background: url("../images/backgroundimg.png") repeat-y;
+            padding: 10px;
+            color: white;
+            position: relative;
+        }
