@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+</head>
+<body>
+    <h1>영구없다</h1>
+    <script>
+        k = 20; //전역변수 선언 및 값 할당 -> 비권장
+        var vk = 20; //위치에 따라서 전역변수가 되거나 또는 함수 영역을 갖는 변수가 된다 -> 가끔 쓰는 개발자들 다수 있음
+        let lk = 20; // 위치에 따라서 전역, 함수, 블럭영역을 갖는 변수 -> 요즘은 무조건 이 형태를 사용하도록 함
+        console.log(k)
+        console.log(vk)
+        console.log(lk)
+        console.log("======================")
+        
+        var vm; //var 변수의 선언 상자를 미리 만들어둠
+        console.log(vm);
+        vm = 'kim'; //만들어진 상자에 값 할당
+        console.log(vm);
+        let lm; //let 변수의 선언 상자를 미리 만들어둠
+        console.log(lm);
+        lm = 'kim'; //만들어진 상자에 값 할당
+        console.log(lm);
+        m = "kim";  //전역변수의 선언 -> 상자만 만들 수 없음 반드시 상자를 만들고  바로 값을 할당해 줘야함
+        //자바스크립트의 상자(변수)는 동적 할당 (자료가 저장이 될 때 타입이 결정된다)이다. => 파이썬
+
+        console.log("======================");
+        if( 0 ){ //-> 0일때 거짓 
+            console.log("조건이 참일때 화면에 나옴")
+        }
+        if( -1 ){ 
+            console.log("조건이 참일때 화면에 나옴")
+        }
+        console.log("======================");
+        if( ' ' ){ //-> 문자열은 0일때 거짓 나머지는 참
+            console.log("조건이 참일때 화면에 나옴")
+        }
+        if( '' ){ 
+            console.log("조건이 참일때 화면에 나옴")
+        }
+        console.log("======================");
+        if( true ){ 
+            console.log("조건이 참일때 화면에 나옴")
+        }
+        if( false){ 
+            console.log("조건이 참일때 화면에 나옴")
+        }
+
+        console.log("======================");
+        let kk; //선언만 했을대는 undefined상태
+        if( kk ){ 
+            console.log("조건이 참일때 화면에 나옴")
+        }
+        console.log("======================");
+        let kk1;
+        kk1=[] //빈배열도 참이 된다=>파이썬과의 차이점
+        if( kk1 ){ 
+            console.log("조건이 참일때 화면에 나옴")
+        }
+
+        console.log("======================");
+        let kk2;
+        kk2={나이 : 19} //빈객체도 참이 된다.
+        if( kk2 ){ 
+            console.log("조건이 참일때 화면에 나옴")
+        }
+    </script>
+</body>
+</html>

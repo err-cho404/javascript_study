@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {fname:"John", lname:"Doe", age:25};
+
+        let text = "";
+        for (let x in person) { //객체일때 in, 배열인 경우 of, 배열일 때 in 사용하는 것은 잘못된 것
+            console.log(x); //속성명 출력
+            console.log(person[x]); //속성에 저장된 값 출력
+        }
+        
+        var arrData = [1,10,100,1000,1000];
+        for (let x in arrData) { //배열인 경우 of, 배열일 때 in 사용하는 것은 잘못된 것
+            console.log(x); //속성명 출력
+            console.log(arrData[x]); //속성에 저장된 값 출력
+        }
+        
+        
+        const cars = ["BMW", "Volvo", "Mini"];
+        for (let x of cars) {
+            console.log(x);
+        }
+
+        const cars1 = ["BMW", "Volvo", "Mini"];
+        let sum = 0 ;
+        for (let x of cars1) {
+            sum = sum+1;
+            console.log(sum);
+        }
+        sum=0;
+        
+        for(let i = 0; i < cars1.length ; i += 1 ) {
+            sum = sum + cars1[i];
+        }
+        console.log("합계 : ",sum);
+
+        let i=0;
+        while(i<10){
+            console.log(i)
+            i++;
+        }
+
+        //create a set
+        const letters = new Set(["a","b","c","a","b"]);
+        console.log( letters.size + "개의 중복되는 않는 자료가 있다.");
+        for(let x of letters){
+            console.log(x)
+        };
+        
+        console.log(typeof myIterator);
+        console.log(myIterator instanceof Iterator); //유사배열 iterator, 배열 array
+
+       
+       
+      
+       //1.화살표 함수로 정의하는 방법
+       hello = function() {
+        return "Hello World!";
+        }
+
+        hello = () => {
+        return "Hello World!"; //함수 본체의 명령문이 1개일 경우 {}생략가능
+        }
+
+        hello = () => "Hello World"; //명령문이 1개이면서 return 문일 경우 return을 생략할 수 있다.
+      
+      
+        //2.화살표 함수로 정의하는 방법
+        hello = function(data1) {//매개변수가 있음
+        return "Hello World!";
+        }
+
+        hello = data1 => {
+        return "Hello World!"; //매개변수가 1개일때는 괄호 생략, 하나도 없을대는 괄호 생걀 불가
+        }
+
+        hello = data1 => "Hello World";
+
+    </script>
+    
+    </body>
+</html>

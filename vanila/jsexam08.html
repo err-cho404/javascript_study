@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <h2>The forEach() Method</h2>
+    
+    <p>Call a function once for each array element:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+        // let funLiteral = function(){};
+        // let aaa= function(){};
+        // console.log (typeof aaa);
+
+        //함수를 넘겨받는 함수
+        function fun1(funData) { //funData에는 함수가 저장된다면(함수를 넘겨받았다면) 이때 저장된 함수를 콜백함수라고 한다.
+            //1번 호출에 의해서 funData=10
+            //2번 호출에 의해서 funData = function() {console.log("영")}
+            if(typeof funData == "function"){
+                funData();
+            }else{
+                console.log(funData);
+            }
+        };
+
+        fun1(10); //1번 호출
+        fun1(function(){
+            console.log("kim")
+        });//2번 호출
+    </script>
+    
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+</head>
+<body>
+    <h1>h1태그입니다.</h1>
+    <script>
+        //배열에 자료 추가하기 (맨뒤에 추가)
+        let arr = [];
+        console.log(arr.length);
+        console.log(arr);
+        let arrSize = arr.push("을지문덕"); //배열명.push()맨 마지막에 자료를 추가한다.(차례대로 추가), 자료를 추가한 후에 길이를 반환한다.
+        console.log(arrSize);
+        console.log(arr);
+        arr[1] = "연개소문";
+        console.log(arr);
+        arr[arr.length] = "이순신";
+        console.log("추가한 후 배열자료 ", arr);
+
+        //배열의 맨 마지막 자료 삭제 => pop() : 삭제한 자료를 반환한다
+        let rtnValue = arr.pop();
+        console.log("삭제한 후 배열자료 " + arr + "/ 삭제후 반환되는 자료 " + rtnValue);
+
+        // 배열 CRUD 를 하나의 함수로 splice()
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(0,0,'맨앞에 들어갈 자료'); // 0번째 위치에서 0개를 선택한 다음 선택된 위치에 자료를 대체해 집어넣는다.
+        console.log(fruits);
+        fruits.splice(5,0,'맨뒤에 들어갈 자료'); // 5번째 위치에서 0개를 선택한 다음 선택된 위치에 자료를 대체해 집어넣는다.
+        console.log(fruits);
+
+        fruits.splice(2,1,'오렌지'); // 인덱스 2번째 위치에서 1개를 선택한 다음 선택된 위치에 자료를 대체해 집어넣는다.
+        console.log(fruits);
+
+        fruits.splice(3,1); // 인덱스 2번째 위치에서 1개를 선택한 다음 선택된 위치를 삭제한다.
+        console.log(fruits);
+
+        fruits.splice(1,3,'바나나','캘리포니아오렌지','망고','포도','수박'); // 인덱스 1번째 위치에서부터 3개를 선택한 다음 선택된 위치에 5개의 자료를 대체해 집어넣는다.
+        console.log(fruits);
+    </script>
+</body>
+</html>
